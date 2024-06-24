@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="css/leaflet-search.css">
         <style>
         #map {
-            width: 1051px;
-            height: 635px;
+            width: 1195px;
+            height: 821px;
         }
         </style>
         <title></title>
@@ -58,7 +58,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[45.12190476579602,-1.8924408219970208],[46.62093334479413,1.524397788639099]]);
+        }).fitBounds([[45.130243118690125,-1.6884014405743843],[46.61804613601553,1.3248487093948171]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
