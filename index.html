@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/leaflet-search.css">
         <style>
         #map {
-            width: 1195px;
+            width: 1067px;
             height: 821px;
         }
         </style>
@@ -34,7 +34,7 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet-search.js"></script>
         <script src="data/Bassin_Charente_0.js"></script>
-        <script src="data/Annee_TM_1.js"></script>
+        <script src="data/TendancedvolutionannuelleenCpardcnnnie_1.js"></script>
         <script src="data/Tendances_TM_2.js"></script>
         <script src="data/Coursdeau_3.js"></script>
         <script src="data/BassinversantCharente_4.js"></script>
@@ -58,7 +58,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[45.130243118690125,-1.6884014405743843],[46.61804613601553,1.3248487093948171]]);
+        }).fitBounds([[45.1364956735126,-1.5293373490483144],[46.61554243068116,1.169342508575196]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -165,7 +165,7 @@
         });
         bounds_group.addLayer(layer_Bassin_Charente_0);
         map.addLayer(layer_Bassin_Charente_0);
-        function pop_Annee_TM_1(feature, layer) {
+        function pop_TendancedvolutionannuelleenCpardcnnnie_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -185,11 +185,7 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['VALUE'] !== null ? autolinker.link(feature.properties['VALUE'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">Decennie</th>\
-                        <td>' + (feature.properties['Decennie'] !== null ? autolinker.link(feature.properties['Decennie'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Decennie'] !== null ? autolinker.link(feature.properties['Decennie'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -199,12 +195,12 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Annee_TM_1_0(feature) {
+        function style_TendancedvolutionannuelleenCpardcnnnie_1_0(feature) {
             if (feature.properties['Decennie'] >= -0.100000 && feature.properties['Decennie'] <= 0.000000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -212,14 +208,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(117,220,243,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.000000 && feature.properties['Decennie'] <= 0.100000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -227,14 +223,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(236,250,253,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.100000 && feature.properties['Decennie'] <= 0.200000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -242,14 +238,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(254,222,207,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.200000 && feature.properties['Decennie'] <= 0.300000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -257,14 +253,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(252,177,150,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.300000 && feature.properties['Decennie'] <= 0.400000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -272,14 +268,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(252,133,101,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.400000 && feature.properties['Decennie'] <= 0.500000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -287,14 +283,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(248,93,66,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.500000 && feature.properties['Decennie'] <= 6.000000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -302,14 +298,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(234,55,42,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.600000 && feature.properties['Decennie'] <= 0.700000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -317,14 +313,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(204,25,29,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.700000 && feature.properties['Decennie'] <= 0.800000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -332,14 +328,14 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(169,16,22,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
             if (feature.properties['Decennie'] >= 0.800000 && feature.properties['Decennie'] <= 0.900000 ) {
                 return {
-                pane: 'pane_Annee_TM_1',
+                pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
@@ -347,24 +343,24 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(103,0,13,1.0)',
-                interactive: false,
+                interactive: true,
             }
             }
         }
-        map.createPane('pane_Annee_TM_1');
-        map.getPane('pane_Annee_TM_1').style.zIndex = 401;
-        map.getPane('pane_Annee_TM_1').style['mix-blend-mode'] = 'normal';
-        var layer_Annee_TM_1 = new L.geoJson(json_Annee_TM_1, {
+        map.createPane('pane_TendancedvolutionannuelleenCpardcnnnie_1');
+        map.getPane('pane_TendancedvolutionannuelleenCpardcnnnie_1').style.zIndex = 401;
+        map.getPane('pane_TendancedvolutionannuelleenCpardcnnnie_1').style['mix-blend-mode'] = 'normal';
+        var layer_TendancedvolutionannuelleenCpardcnnnie_1 = new L.geoJson(json_TendancedvolutionannuelleenCpardcnnnie_1, {
             attribution: '',
-            interactive: false,
-            dataVar: 'json_Annee_TM_1',
-            layerName: 'layer_Annee_TM_1',
-            pane: 'pane_Annee_TM_1',
-            onEachFeature: pop_Annee_TM_1,
-            style: style_Annee_TM_1_0,
+            interactive: true,
+            dataVar: 'json_TendancedvolutionannuelleenCpardcnnnie_1',
+            layerName: 'layer_TendancedvolutionannuelleenCpardcnnnie_1',
+            pane: 'pane_TendancedvolutionannuelleenCpardcnnnie_1',
+            onEachFeature: pop_TendancedvolutionannuelleenCpardcnnnie_1,
+            style: style_TendancedvolutionannuelleenCpardcnnnie_1_0,
         });
-        bounds_group.addLayer(layer_Annee_TM_1);
-        map.addLayer(layer_Annee_TM_1);
+        bounds_group.addLayer(layer_TendancedvolutionannuelleenCpardcnnnie_1);
+        map.addLayer(layer_TendancedvolutionannuelleenCpardcnnnie_1);
         function pop_Tendances_TM_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -386,9 +382,6 @@
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['NOM_USUEL'] !== null ? autolinker.link(feature.properties['NOM_USUEL'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td class="visible-with-data" id="ALTI"colspan="2"><strong>ALTI</strong><br />' + (feature.properties['ALTI'] !== null ? autolinker.link(feature.properties['ALTI'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Annee'] !== null ? '<img src="images/' + String(feature.properties['Annee']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
@@ -413,7 +406,7 @@
                 weight: 1,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(145,82,45,1.0)',
+                fillColor: 'rgba(255,234,1,1.0)',
                 interactive: true,
             }
         }
@@ -490,7 +483,7 @@
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                weight: 1.0,
+                weight: 2.0,
                 fillOpacity: 0,
                 interactive: false,
             }
@@ -658,6 +651,24 @@
         });
         bounds_group.addLayer(layer_Villes_5);
         map.addLayer(layer_Villes_5);
+        var baseMaps = {};
+        var overlaysTree = [
+            {label: '<img src="legend/Villes_5.png" /> Villes', layer: layer_Villes_5},
+            {label: '<img src="legend/BassinversantCharente_4.png" /> Bassin versant Charente', layer: layer_BassinversantCharente_4},
+            {label: '<img src="legend/Coursdeau_3.png" /> Cours d eau', layer: layer_Coursdeau_3},
+            {label: '<img src="legend/Tendances_TM_2.png" /> Tendances_TM', layer: layer_Tendances_TM_2},
+            {label: 'Tendance d\'évolution annuelle en °C par décénnnie<br /><table><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_0100.png" /></td><td>-0,1 - 0</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_0011.png" /></td><td>0 - 0,1</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_01022.png" /></td><td>0,1 - 0,2</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_02033.png" /></td><td>0,2 - 0,3</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_03044.png" /></td><td>0,3 - 0,4</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_04055.png" /></td><td>0,4 - 0,5</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_05066.png" /></td><td>0.5 - 0.6</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_06077.png" /></td><td>0.6 - 0.7</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_07088.png" /></td><td>0.7 - 0.8</td></tr><tr><td style="text-align: center;"><img src="legend/TendancedvolutionannuelleenCpardcnnnie_1_08099.png" /></td><td>0.8 - 0.9</td></tr></table>', layer: layer_TendancedvolutionannuelleenCpardcnnnie_1},
+            {label: '<img src="legend/Bassin_Charente_0.png" /> Bassin_Charente', layer: layer_Bassin_Charente_0},]
+        var lay = L.control.layers.tree(null, overlaysTree,{
+            //namedToggle: true,
+            //selectorBack: false,
+            //closedSymbol: '&#8862; &#x1f5c0;',
+            //openedSymbol: '&#8863; &#x1f5c1;',
+            //collapseAll: 'Collapse all',
+            //expandAll: 'Expand all',
+            collapsed: true,
+        });
+        lay.addTo(map);
         setBounds();
         var i = 0;
         layer_Tendances_TM_2.eachLayer(function(layer) {
@@ -665,7 +676,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['Station'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['Station']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Tendances_TM_2'});
+            layer.bindTooltip((layer.feature.properties['Station'] !== null?String('<div style="color: #323232; font-size: 8pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['Station']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Tendances_TM_2'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -678,7 +689,7 @@
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['NOM'] !== null?String('<div style="color: #323232; font-size: 5pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['NOM']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Villes_5'});
+            layer.bindTooltip((layer.feature.properties['NOM'] !== null?String('<div style="color: #323232; font-size: 8pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['NOM']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Villes_5'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
